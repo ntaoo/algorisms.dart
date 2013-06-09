@@ -18,7 +18,7 @@ List<dynamic> bubbleSort(List<dynamic> list) {
     }
     print("Sorting : $list");
     sortedLength++;
-  } while (isSortStillNeeded == true);
+  } while (isSortStillNeeded);
 
   return list;
 }
