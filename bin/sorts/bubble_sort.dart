@@ -1,6 +1,6 @@
 import 'dart:math';
 
-List<dynamic> bubbleSort(List<dynamic> list) {
+void bubbleSort(List<dynamic> list) {
   int i, temp;
   bool isSortStillNeeded;
   int sortedLength = 0;
@@ -11,6 +11,7 @@ List<dynamic> bubbleSort(List<dynamic> list) {
     for (i = 0; i < lastIndex - sortedLength; i++) {
       if (list[i] > list[i + 1]) {
         isSortStillNeeded = true;
+        // swap
         temp = list[i];
         list[i] = list[i + 1];
         list[i + 1] = temp;
@@ -19,11 +20,9 @@ List<dynamic> bubbleSort(List<dynamic> list) {
     print("Sorting : $list");
     sortedLength++;
   } while (isSortStillNeeded);
-
-  return list;
 }
 
-void main() {
+main() {
   const maxNumber = 100000;
   const numbersLength = 10;
   var random = new Random();
@@ -32,9 +31,6 @@ void main() {
   for (int i = 0; i < numbersLength; i++) numbers[i] = random.nextInt(maxNumber);
 
   print("Before Sort : $numbers");
-  final result = bubbleSort(numbers);
-  print("After Sort : $result");
-
-  numbers.sort();
-  print("Use Builtin Sort : $numbers");
+  bubbleSort(numbers);
+  print("After Sort : $numbers");
 }
