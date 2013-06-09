@@ -3,12 +3,12 @@ import 'dart:math';
 List<dynamic> bubbleSort(List<dynamic> list) {
   int i, temp;
   bool isSortStillNeeded;
-  int sorted_length = 0;
-  final last_index = list.length - 1;
+  int sortedLength = 0;
+  final lastIndex = list.length - 1;
 
   do {
     isSortStillNeeded = false;
-    for (i = 0; i < last_index - sorted_length; i++) {
+    for (i = 0; i < lastIndex - sortedLength; i++) {
       if (list[i] > list[i + 1]) {
         isSortStillNeeded = true;
         temp = list[i];
@@ -17,7 +17,7 @@ List<dynamic> bubbleSort(List<dynamic> list) {
       }
     }
     print("Sorting : $list");
-    sorted_length++;
+    sortedLength++;
   } while (isSortStillNeeded == true);
 
   return list;
