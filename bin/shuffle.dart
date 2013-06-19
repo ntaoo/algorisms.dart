@@ -1,7 +1,7 @@
 import 'dart:math';
 
 // Fisher-Yates
-void shuffle(list) {
+void shuffle(List<dynamic> list) {
   var random = new Random();
   var i = list.length;
   while(i > 0) {
