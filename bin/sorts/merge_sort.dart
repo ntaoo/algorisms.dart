@@ -10,6 +10,7 @@ void mergeSort(List<dynamic> list) {
     int indexL = startIndexL;
     int indexH = startIndexH;
 
+    // fill the marge until either of the two ranges finish merging.
     while (indexL <= endIndexL && indexH <= endIndexH) {
       if (list[indexL] < list[indexH]) {
         merge[mergeIndex] = list[indexL];
@@ -22,6 +23,7 @@ void mergeSort(List<dynamic> list) {
       }
     }
 
+    // fill the rest of the merge with the rest of the target.
     if (indexL > endIndexL) {
       for (indexH; indexH <= endIndexH; indexH++) {
         merge[mergeIndex] = list[indexH];
@@ -34,7 +36,7 @@ void mergeSort(List<dynamic> list) {
       }
     }
 
-    // replace sub list with merged
+    // replace the range of the list with merged.
     mergeIndex = 0;
     for (int i = startIndexL; i <= endIndexH; i++) {
       list[i] = merge[mergeIndex];
