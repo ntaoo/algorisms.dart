@@ -10,7 +10,7 @@ void mergeSort(List<dynamic> list) {
     int indexL = startIndexL;
     int indexH = startIndexH;
 
-    // fill the marge until either of the two ranges finish merging.
+    // fill the merge until either of the two ranges finish merging.
     while (indexL <= endIndexL && indexH <= endIndexH) {
       if (list[indexL] < list[indexH]) {
         merge[mergeIndex] = list[indexL];
