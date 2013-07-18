@@ -1,4 +1,4 @@
-algorisms.dart
+algorithms
 ==============
 
-Algorithms by dart
+Algorithms in Dart, JavaScript
