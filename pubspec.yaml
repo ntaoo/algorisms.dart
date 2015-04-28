@@ -1,4 +1,6 @@
 name: algorithms
 description: algorithms
-#dependencies:
-#  unittest: any
+version: 0.0.2
+description: Collection of algorithms.
+dependencies:
+dev_dependencies:
